@@ -1,0 +1,117 @@
+/* Gaya untuk elemen judul pada film-list */
+#title-head h3 {
+  margin-left: 20px;
+  margin-top: 20px;
+  color: white;
+  border-bottom: 5px solid #3282B8;
+  display: inline-block;
+}
+
+/* Gaya untuk elemen film-list */
+film-list {
+  display: flex;
+  flex-wrap: wrap; /* Ubah menjadi wrap agar kolom baru muncul di bawah */
+  overflow-x: auto;
+  margin: 30px;
+  justify-content: space-between; /* Mengatur space-between untuk batasan 5 kolom */
+}
+
+/* Gaya untuk elemen film-item */
+film-item {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: calc(20% - 20px); /* Mengatur 5 kolom */
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  border-radius: 10px;
+  flex: 0 0 auto;
+}
+
+/* Gaya untuk gambar dalam film-item */
+film-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Gaya untuk judul dalam film-item */
+film-item .film-title {
+  font-size: 1.5rem;
+  margin-top: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* Gaya untuk genre dalam film-item */
+film-item .film-genre {
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Gaya untuk tahun dan durasi dalam film-item */
+film-item .film-year,
+film-item .film-duration {
+  font-size: 12px;
+}
+
+/* Gaya untuk info dalam film-item */
+film-item .film-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Gaya untuk deskripsi dalam film-item */
+film-item .film-description {
+  font-size: 14px;
+  margin: 10px;
+  text-align: left;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 5px;
+  max-height: 100px;
+  overflow-y: auto;
+  white-space: break-spaces;
+}
+
+/* Gaya untuk tanda kutip dalam deskripsi film-item */
+film-item .film-description::before {
+  content: open-quote;
+}
+
+film-item .film-description::after {
+  content: close-quote;
+}
+
+/* Responsif untuk lebar layar kurang dari 768px */
+@media screen and (max-width: 768px) {
+  film-list {
+    justify-content: center;
+  }
+
+  film-item {
+    width: calc(50% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsif untuk lebar layar kurang dari 480px */
+@media screen and (max-width: 480px) {
+  film-item {
+    width: 100%;
+    margin-right: 0;
+  }
+}
