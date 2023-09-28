@@ -14,12 +14,12 @@
 
 .film-item {
     background-color: #fff;
-    border: 1px solid #ddd;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     text-align: center;
     width: 300px;
     margin-right: 20px;
+    position: relative;
+    border-radius: 10px;
 }
 
 .film-item:last-child {
@@ -29,14 +29,80 @@
 .film-item img {
     max-width: 100%;
     height: auto;
+    border-radius: 10px 10px 0 0;
 }
 
 .film-title {
     font-size: 1.5rem;
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
 .film-genre {
     color: #666;
     margin-top: 5px;
+}
+
+.film-year,
+.film-duration {
+    font-size: 12px;
+}
+
+.film-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.film-description {
+    font-size: 14px;
+    margin: 10px;
+    text-align: left;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 5px;
+    max-height: 100px;
+    overflow-y: auto; 
+    white-space: break-spaces; 
+}
+
+.film-description::before {
+    content: open-quote;
+}
+
+.film-description::after {
+    content: close-quote;
+}
+
+@media screen and (max-width: 768px) {
+    #film-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .film-item {
+        width: calc(50% - 20px);
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .film-item:last-child {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .film-item {
+        width: 100%;
+        margin-right: 0;
+    }
 }

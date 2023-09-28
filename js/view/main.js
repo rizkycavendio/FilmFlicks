@@ -4,16 +4,21 @@ const renderFilm = () => {
     var filmListDiv = document.getElementById("film-list");
 
     films.forEach(function(film) {
-    var filmItemDiv = document.createElement("div");
-    filmItemDiv.className = "film-item";
+        var filmItemDiv = document.createElement("div");
+        filmItemDiv.className = "film-item";
 
-    filmItemDiv.innerHTML = `
-    <img src="${film.gambar}" alt="${film.judul}">
-    <h2 class="film-title">${film.judul}</h2>
-    <p class="film-genre">${film.genre.join(", ")}</p>
-    `;
+        filmItemDiv.innerHTML = `
+            <div class="film-info">
+                <span class="film-year">${film.tahun}</span>
+                <span class="film-duration">${film.durasi}</span>
+            </div>
+            <img src="${film.gambar}" alt="${film.judul}">
+            <h2 class="film-title">${film.judul}</h2>
+            <p class="film-genre">${film.genre.join(", ")}</p>
+            <p class="film-description">${film.deskripsi}</p>
+        `;
 
-    filmListDiv.appendChild(filmItemDiv);
+        filmListDiv.appendChild(filmItemDiv);
     });
 }
 
