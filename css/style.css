@@ -1,0 +1,15 @@
+@import 'header.css';
+@import 'film.css';
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #1b262c !important;
+}
+html {
+    scroll-behavior: smooth;
+}

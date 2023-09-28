@@ -1,0 +1,13 @@
+.nav-bar {
+    padding: 16px;
+    width: 100%;
+    background-color: #1B262C;
+    color: white;
+}
+#carousel-banner{
+    max-height: 600px;
+}
+.carousel-inner img {
+    max-height: 600px;
+    object-fit: cover;
+}

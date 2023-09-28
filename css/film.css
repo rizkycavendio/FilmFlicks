@@ -1,0 +1,42 @@
+#title-head h3{
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
+    border-bottom: 5px solid #3282B8;
+    display: inline-block;
+}
+#film-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin:30px;
+}
+
+.film-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.film-item:last-child {
+    margin-right: 0;
+}
+
+.film-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.film-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.film-genre {
+    color: #666;
+    margin-top: 5px;
+}
