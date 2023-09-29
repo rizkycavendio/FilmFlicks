@@ -1,0 +1,35 @@
+.container-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-top: 5px solid #3282B8;
+}
+
+.column-left, .column-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.description-section {
+    text-align: center;
+    color: white;
+}
+
+.column-right img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+ @media (max-width: 768px) {
+    .container-section {
+      flex-direction: column;
+      text-align: center;
+}
+
+.column-left, .column-right {
+      flex: none;
+      width: 100%;
+  }
+}

@@ -5,10 +5,7 @@ class FilmList extends HTMLElement {
   
     connectedCallback() {
       this.innerHTML = `
-        <div id="film-list">
-          <!-- Film items will be added here dynamically -->
-        </div>
-      `;
+        <div id="film-list"></div>`;
     }
   }
   

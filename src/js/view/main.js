@@ -16,19 +16,36 @@ export async function fetchData() {
       dataType: 'json'
     });
 
-    const films = data.d;
-    films.sort(() => Math.random() - 0.5);
-    const filmsToShow = films.slice(0, 15);
+    renderFilms(data.d);
 
-    const filmList = document.querySelector('film-list');
+    $('.btn-search').on('click', async () => {
+      const query = $('#searchBar').val();
 
-    filmsToShow.forEach((film) => {
-      const filmItem = new FilmItem(film);
-      filmList.appendChild(filmItem);
+      if (query) {
+        const searchData = await $.ajax({
+          url: `https://imdb8.p.rapidapi.com/auto-complete?q=${query}`,
+          headers: headers,
+          method: 'GET',
+          dataType: 'json'
+        });
+
+        renderFilms(searchData.d);
+      }
     });
   } catch (error) {
     console.error('An error occurred:', error);
   }
 }
 
+const renderFilms = (films) => {
+  const filmList = document.querySelector('film-list');
+  filmList.innerHTML = '';
 
+  films.sort(() => Math.random() - 0.5);
+  const filmsToShow = films.slice(0, 15);
+
+  filmsToShow.forEach((film) => {
+    const filmItem = new FilmItem(film);
+    filmList.appendChild(filmItem);
+  });
+}

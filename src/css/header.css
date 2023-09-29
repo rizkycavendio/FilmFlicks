@@ -1,3 +1,19 @@
+  nav-bar {
+    background-color: #1B262C;
+    color: white;
+  }
+ .container .navbar-brand{
+  font-size: 40px;
+  font-weight: 800;
+  color: #3282B8;
+ }
+  .filter-dropdown {
+    margin-right: 10px;
+  }
+
+  .search-input {
+    margin-right: 10px;
+  }
 #carousel-banner{
     max-height: 600px;
 }

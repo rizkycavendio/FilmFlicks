@@ -1,5 +1,7 @@
 @import 'header.css';
 @import 'film.css';
+@import 'section.css';
+@import 'footer.css';
 
 *{
     margin: 0px;
