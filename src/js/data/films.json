@@ -1,4 +1,4 @@
-const data = {
+{
   "error": false,
   "message": "success",
   "films": [
@@ -138,7 +138,4 @@ const data = {
       "deskripsi": "Seorang ksatria muda menghadapi makhluk mistis yang memungkinkan dia untuk menguji keberanian dan kehormatannya."
     }
   ]
-};
-
-const films = data.films;
-export default films;
+}
