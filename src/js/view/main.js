@@ -2,10 +2,10 @@ import FilmItem from '../component/film-item.js';
 import $ from 'jquery';
 
 export async function fetchData() {
-  const url = 'https://imdb8.p.rapidapi.com/auto-complete?q=avangers';
+  const url = 'https://imdb8.p.rapidapi.com/auto-complete?q=avengers';
   const headers = {
-    'X-RapidAPI-Key': '185d22d143msh70d6d6045d47c92p10730fjsna5332e8d0b15',
-    'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
+    'X-RapidAPI-Key': 'c933377053msh36dec8daddb676fp134e77jsn52834871f775',
+		'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
   };
 
   try {
@@ -33,7 +33,7 @@ export async function fetchData() {
       }
     });
   } catch (error) {
-    console.error('An error occurred:', error);
+    console.error('Error fetching data:', error);
   }
 }
 

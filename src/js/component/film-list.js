@@ -1,9 +1,9 @@
 class FilmList extends HTMLElement {
-    constructor() {
-      super();
-    }
-  
     connectedCallback() {
+      this.render();
+    }
+
+    render(){
       this.innerHTML = `
         <div id="film-list"></div>`;
     }
